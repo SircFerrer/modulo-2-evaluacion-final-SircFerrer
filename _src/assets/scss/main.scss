@@ -1,8 +1,12 @@
-@import 'core/settings';
-@import 'core/links';
+.container {
+  display: flex;
+  justify-content: space-between;
+}
 
-body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
-	margin: 0;
-	height: 100vh;
+.container__list__item {
+  background-color: grey;
+}
+
+.container__list__item--fav {
+  background-color: tomato;
 }
