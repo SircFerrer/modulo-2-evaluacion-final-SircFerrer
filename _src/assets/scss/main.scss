@@ -1,7 +1,7 @@
 .body {
   font-family: "Montserrat", sans-serif;
   margin: 0px;
-  padding-right: 200px;
+  padding-right: 300px;
   padding-left: 20px;
   box-sizing: border-box;
   background-color: rgb(245, 236, 220);
@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  margin-top: 10px;
   background-color: grey;
   list-style: none;
 }
@@ -55,9 +55,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 180px;
+
   background-color: tomato;
   list-style: none;
+  margin-top: 10px;
 }
 .favTitle {
   color: white;
+  text-align: center;
+}
+.item__img--fav {
+  width: 120px;
+  height: 140px;
+  padding-top: 10px;
+}
+.fas {
+  margin-right: 10px;
 }

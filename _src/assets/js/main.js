@@ -116,9 +116,9 @@ function paintFavSeries() {
       htmlCode +=
         '<img class="item__img"src="./assets/images/tvPlaceholder.png"/>';
     } else {
-      htmlCode += `<img class='item__img'src='${favorites[i].show.image.medium}'/>`;
+      htmlCode += `<img class='item__img--fav'src='${favorites[i].show.image.medium}'/>`;
     }
-    htmlCode += `<h3 class="favTitle">${favorites[i].show.name}</h3>`;
+    htmlCode += `<h3 class="favTitle"><i class="fas fa-heart"></i>${favorites[i].show.name}</h3>`;
 
     htmlCode += "</li>";
   }
