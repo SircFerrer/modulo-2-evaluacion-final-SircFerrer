@@ -48,10 +48,16 @@ function getServerData(event) {
 
 function paintSeries() {
   let htmlCode = "";
-  const isFav = favorites.foundIndex !== -1;
-  if (isFav) {
-    for (let i = 0; i < series.length; i++) {
-      htmlCode += `<li class='container__list__item js-card'index='${series[i].show.indexOf}'id='${series[i].show.id}'>`;
+
+  for (let i = 0; i < series.length; i++) {
+    let isFav = false;
+    for (const favorite of favorites) {
+      if (series[i].show.id === favorite.show.id) {
+        isFav = true;
+      }
+    }
+    if (isFav) {
+      htmlCode += `<li class='container__list__item--fav js-card'index='${series[i].show.indexOf}'id='${series[i].show.id}'>`;
       if (series[i].show.image === null) {
         htmlCode +=
           '<img class="item__img"src="./assets/images/tvPlaceholder.png"/>';
@@ -61,9 +67,7 @@ function paintSeries() {
       htmlCode += `<h3>${series[i].show.name}</h3>`;
 
       htmlCode += "</li>";
-    }
-  } else {
-    for (let i = 0; i < series.length; i++) {
+    } else {
       htmlCode += `<li class='container__list__item js-card'index='${series[i].show.indexOf}'id='${series[i].show.id}'>`;
       if (series[i].show.image === null) {
         htmlCode +=
