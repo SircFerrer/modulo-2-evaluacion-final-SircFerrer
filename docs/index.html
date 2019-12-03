@@ -3,20 +3,39 @@
     
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Adalab Web Starter Kit</title>
-        <link rel="icon" href="./favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
         <link rel="stylesheet" href="./assets/css/main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap"
+        rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/61294e7035.js" crossorigin="anonymous"></script>
     </head>
     
-    <body>
-        <div class="page">
-            <header class="page__header">Header</header>
-            <main class="page__main">Main</main> <a class="link__adalab" href="https://adalab.es" target="_blank">Adalab</a>
+    <body class="body">
+        <header class="header">
+             <h1 class="header__title">Buscador de series</h1>
 
-            <a
-            class="link__github" href="https://github.com" target="_blank">GitHub</a>
-        </div>
+            <form class="header__form" action="">
+                <input class="form__input js-input" type="text" />
+                <button class="form__button js-button">Buscar</button>
+            </form>
+        </header class="header">
+        <main class="main">
+            <div class="containerFav">
+                 <h2 class="containerFav__title">Mis series favoritas</h2>
+
+                <ul class="container__list js-containerFav"></ul>
+            </div>
+            <div class="container">
+                 <h2 class="containerFav__title">Series</h2>
+
+                <ul class="container__list js-container"></ul>
+            </div>
+        </main>
+        <footer></footer>
+        <script type="text/javascript" src="./assets/js/main.js"></script>
     </body>
 
 </html>
