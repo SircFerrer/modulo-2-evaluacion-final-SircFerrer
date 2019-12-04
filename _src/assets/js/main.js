@@ -4,11 +4,20 @@ const input = document.querySelector(".js-input");
 const button = document.querySelector(".js-button");
 const container = document.querySelector(".js-container");
 const containerFav = document.querySelector(".js-containerFav");
+const log = document.querySelector(".js-btn");
 
 let series = [];
 let favorites = [];
 
 // guardar favoritos en el localstorage
+
+function logFavorites(event) {
+  event.preventDefault();
+  for (const favlog of favorites) {
+    console.log(favlog.show.name);
+  }
+}
+log.addEventListener("click", logFavorites);
 
 function setLocalStorage() {
   console.log("setLocalStorage", favorites);
@@ -65,6 +74,7 @@ function paintSeries() {
         htmlCode += `<img class='item__img'src='${series[i].show.image.medium}'/>`;
       }
       htmlCode += `<h3>${series[i].show.name}</h3>`;
+      htmlCode += `<p>${series[i].show.status}</p>`;
 
       htmlCode += "</li>";
     } else {
@@ -76,6 +86,7 @@ function paintSeries() {
         htmlCode += `<img class='item__img'src='${series[i].show.image.medium}'/>`;
       }
       htmlCode += `<h3>${series[i].show.name}</h3>`;
+      htmlCode += `<p>${series[i].show.status}</p>`;
 
       htmlCode += "</li>";
     }
